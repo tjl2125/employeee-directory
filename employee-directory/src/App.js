@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import Search from "./components/Search";
-import List from "./components/List"
+import Search from "./components/Search/Search";
+import EmployeeInfo from "./components/EmployeeInfo/EmployeeInfo";
+import List from "./components/List/List";
 // import "./App.css";
 
 function App() {
@@ -9,9 +10,11 @@ function App() {
     <div class = "App">
       <Header />
         <Search />
-        <List>
+        <EmployeeInfo>
+          <List>
 
-        </List>
+          </List>
+        </EmployeeInfo>
 
     </div>
     
