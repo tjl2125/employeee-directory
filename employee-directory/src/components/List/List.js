@@ -3,7 +3,7 @@ import "./style.css";
 
 const List = (props) => {
   return (
-    <table className="table table-striped table-sortable text-center">
+    <table className="table table-sortable table-striped text-center">
       <thead>
         <tr>
           <th scope="col">Image</th>
@@ -19,7 +19,7 @@ const List = (props) => {
             <span onClick={() => props.sortBy("email")}>Email</span>
           </th>
           <th scope="col">
-            <span onClick={() => props.sortBy("dob", "date")}>DOB</span>
+            <span onClick={() => props.sortBy("dob", "date")}>Date of Birth</span>
           </th>
         </tr>
       </thead>
@@ -46,7 +46,7 @@ const List = (props) => {
             </tr>
           );
         })}
-      </tbody>s
+      </tbody>
     </table>
   );
 };
