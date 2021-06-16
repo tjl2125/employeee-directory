@@ -30,7 +30,7 @@ class Container extends Component {
           .catch((err) => console.log(err));
       }
     
-      // Update search state to filter by employee name
+      // filtering by employee name by updating state
       handleInputChange = (event) => {
         const value = event.target.value;
         this.setState({ search: value });
@@ -41,8 +41,7 @@ class Container extends Component {
         event.preventDefault();
       };
     
-      // Sort with the key of specified object.
-      // If key has children, sort by primary child and optionally a secondary child. i.e. sort by last name, then first.
+      // sort through the key of specified object.
       sortBy = (key, primary = 0, secondary = 0) => {
         let sortedEmployees = this.state.filteredEmployees;
         if (this.state.sortDirections[key]) {
@@ -58,8 +57,7 @@ class Container extends Component {
             a = a[key];
             b = b[key];
     
-            // If secondary comparison given and primary comparison is equal
-            // Example: Sorting by last name, if last names are equal, then sort that instance by first name instead.
+            // sorting with secondary if the primary is the same
             if (primary) {
               if (secondary && a[primary] === b[primary]) {
                 return a[secondary].localeCompare(b[secondary]);
@@ -108,7 +106,7 @@ class Container extends Component {
         dob.push(("0" + date.getDate()).slice(-2));
         dob.push(date.getFullYear());
     
-        // Join formatted date
+        // join formatted date
         return dob.join("-");
       };
     
