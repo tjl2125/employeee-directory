@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
-import EmployeeInfo from "./components/EmployeeInfo/EmployeeInfo";
+import Container from "./components/EmployeeContainer/Container";
 import List from "./components/List/List";
 // import "./App.css";
 
@@ -10,11 +10,11 @@ function App() {
     <div class = "App">
       <Header />
         <Search />
-        <EmployeeInfo>
+        <Container>
           <List>
 
           </List>
-        </EmployeeInfo>
+        </Container>
 
     </div>
     
